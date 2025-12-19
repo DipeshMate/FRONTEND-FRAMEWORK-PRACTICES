@@ -1,0 +1,50 @@
+1- npm i -g @angular/cli //it will give you ng command in your terminal
+2 - ng new myapp//generate a new angular app, it comes pre-configured with routing, testing framework & a style preprocessor file.
+3- [ ng add command ] --> (@angular/pwa) progressive web app,(@nguniversal/express-engine) server-side rendering,(@angular/fire) firebase.
+4- directives like *ngFor & ngIf are the directives that is a Custom HTML attributes 
+//routing helps to go one page to another page
+Angular  a jS front-end framework component based ui library.
+5. point-to-remember // import { FormsModule, ReactiveFormsModule } from '@angular/forms'; package in app.module/component.ts and also in where you applied Form on a applied component.
+6- npm i json-server // with this package it will provide an api in which we can do CRUD operation in json form
+* create your component by - ng generate component navbar 
+* component decorator makes a typescript class into a component
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-navbar',
+  standalone: true,
+  imports: [],
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss'
+
+//template
+
+* we can bind the property to HTML <p>  {{ count }} </p> using double braces it's a two way data-binding so when we change the value.
+<button>
+(click)="functionCall()" left side => we add event name in  parenthesis (click) and right side is the "abc()" expression
+
+</button>
+  
+})
+export class NavbarComponent {
+
+count = 0; //*any property on above class are considered reactive state and when their values change the component will re-render the ui.
+
+functionCall(){
+    this.count++;
+}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//complete template in a component like
+
+<p *ngIf="count >= 1 >{{count}}</p> //*ngIf is for a conditional logic --> render me when truthy
+
+*ngFor for a loop
+
+//service

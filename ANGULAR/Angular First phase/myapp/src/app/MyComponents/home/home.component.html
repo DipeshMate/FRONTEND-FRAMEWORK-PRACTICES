@@ -1,0 +1,42 @@
+<div class="container mt-2">
+
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Add User</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">User List</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <form [formGroup] = "userForm" (ngSubmit)="SubmitForm()">
+                <div class="row d-flex mt-2 formGroup">
+                  <div class="col-md-6 ">
+                    <label for="formGroup">Name</label>
+                    <input type="text"  class="form-control"formControlName="Name" name="Name" placeholder="Enter Name">
+                </div>
+                <div class="col-md-6">
+                      <label for="formGroup">Age</label>
+                      <input type="number" class="form-control" formControlName="Age" name="Age" placeholder="Enter Age">
+                    </div>
+                </div>
+                <div class="row d-flex mt-2">
+                    <div class="col-md-6">
+                      <label for="formGroup">Mobile Number</label>
+                      <input type="number" class="form-control" formControlName="Mobile" name="Mobile" placeholder="Enter Mobile No.">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="formGroup">Email</label>
+                    <input type="email" class="form-control" formControlName="Email" name="Email" placeholder="Enter Email">
+                  </div>
+                </div>
+                <div class="row d-flex mt-2 btns">
+                    <button type="submit" class="btn ml-1 mr-1 btn-primary">Add</button>
+                    <button type="reset" class="btn ml-1 mr-1 btn-secondary">Reset</button>
+                </div>
+                
+              </form>    
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">User List</div>
+    </div>
+    
+</div>
