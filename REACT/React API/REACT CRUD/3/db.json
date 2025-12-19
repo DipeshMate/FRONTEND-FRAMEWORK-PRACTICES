@@ -1,0 +1,29 @@
+
+{
+"users" : [
+  {
+        "id":1,
+        "name":"Ellien George",
+        "username":"bret",
+        "email":"sincere@april.btz",
+        "phone":"1-2344-567775-09",
+        "website":"hidegard.org"
+    },
+    {
+        "id":2,
+        "name":"locus hilium",
+        "username":"steve",
+        "email":"gomtiloki@amay.asz",
+        "phone":"7544-x2256-875-99",
+        "website":"hidegard.org"
+    },
+    {
+        "id":3,
+        "name":"Giliyol Stan",
+        "username":"huli",
+        "email":"sintrek@june.lop",
+        "phone":"145-844-x7775-09",
+        "website":"hidelofi.org"
+    }
+]
+}

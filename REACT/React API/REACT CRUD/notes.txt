@@ -1,0 +1,100 @@
+## TO DELETE 
+
+1> * const dt = data.filter(item => item.id !== id); // this filter function will return the other remaining id's except the deleted id.
+        setData(dt);
+2> *  Employee.splice(index, 1); // The splice() method adds and/or removes array elements and this require setting up of Data or history('/')
+
+e.preventDefault() // This function restrict other events to happen.
+
+##### TO EDIT
+
+1> * We can use Filter  and don't forget to set value in a function.
+const dt = data.filter((item) => item.id === id);
+    if (dt !== undefined) {
+      setIsUpdate(true);
+      setId(id);
+      setFirstName(dt[0].firstname);
+      setLastName(dt[0].lastname);
+      setSalary(dt[0].salary);
+      setAge(dt[0].age);
+    }
+
+--to get data reflected in we use update button
+##### To Update -- we need index in the base of id. using map function
+
+const index = data
+      .map((item) => {
+        return item.id;
+      })
+      .indexOf(id);
+
+    const dt = [...data]; // here all the data of employees array is been taken by Spread operator
+    dt[index].firstname = firstname; // dt[index].firstname ( is a properties of Employees Array) and only firstname is a states
+    dt[index].lastname = lastname;
+    dt[index].salary = salary;
+    dt[index].age = age;
+
+    setData(dt);
+    handleClear();
+    
+
+##### To Clear 
+
+const handleClear = () => {
+    setId(0);
+    setFirstName("");
+    setLastName("");
+    setSalary("");
+    setAge("");
+    setIsUpdate(false);
+  };
+
+
+#### TO ADD
+
+1> *  const handleSave = (e) => {
+   
+   //Here is a validation of input form
+   
+    let error = '';
+
+    if (firstname === '') {
+      error += 'firstname is required, ';
+    }
+    if (lastname === '') {
+      error += 'lastname is required, ';
+    }
+    if (salary === '') {
+      error += 'salary is required, ';
+    }
+    if (age <= 0) {
+      error += 'age is required.';
+    }
+
+    if (error === '') {
+      e.preventDefault();
+      const dt = [...data];
+      const newObject = {
+        id: EmployeeData.length + 1, // 
+        firstname: firstname,
+        lastname: lastname,
+        salary: salary,
+        age: age,
+      }
+      dt.push(newObject);
+      setData(dt);//it will set/update the state
+    }
+    else {
+      alert(error);
+    }
+    };
+
+2> * 
+        let a = name,
+            b = age,
+            c = Employee.length + 1; 
+        
+        Employee.push({ id: c, name: a, age: b }); // pushing new object
+
+        and also set default setting  onChange={(e)=>setName(e.target.value)}
+
