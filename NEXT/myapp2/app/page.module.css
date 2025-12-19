@@ -1,0 +1,15 @@
+.main{
+    padding: 40px;
+  }
+  
+  .h1{
+    margin: 50px 0;
+    text-align: center;
+  }
+  
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
