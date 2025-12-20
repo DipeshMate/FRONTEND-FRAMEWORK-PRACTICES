@@ -1,0 +1,6 @@
+Step-1 npx create-react-app .
+Step-2 npm i react-router-dom react-icons sass 
+Step-3 npm start
+
+
+To run all apps just do this..
