@@ -1,0 +1,12 @@
+File C:\Users\D-Mate\AppData\Roaming\npm\vercel.ps1 cannot be loaded because    
+running scripts is disabled on this system.
+
+solution:- execute below three scripts on vs code terminal in your project...!!
+
+1. set-ExecutionPolicy RemoteSigned -Scope CurrentUser 
+
+2. Get-ExecutionPolicy
+
+3. Get-ExecutionPolicy -list
+
+That's all... And there you go! Your problem got Solved!!
